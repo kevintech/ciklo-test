@@ -14,6 +14,9 @@ const createUser = function(record) {
         username: record.username,
         email: record.email
     });
+    var error = newRecord.validateSync();
+    //TODO: Proper error handling
+    if (error) throw new Error("ValidationError");
     return newRecord.save().exec();
 }
 

@@ -52,7 +52,7 @@ const remove = async function(request, response, next) {
         }
         
         await packagesService.removePackage(request.params.id);
-        response.send("Deleted successfully");
+        response.send();
     }
     catch (error) {
         response.status(500).json(error);

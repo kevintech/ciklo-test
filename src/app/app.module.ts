@@ -8,6 +8,8 @@ import { TruckComponent } from './truck/truck.component';
 import { DriverComponent } from './driver/driver.component';
 import { PackageComponent } from './package/package.component';
 import { TruckNewComponent } from './truck-new/truck-new.component';
+import { DriverNewComponent } from './driver-new/driver-new.component';
+import { PackageNewComponent } from './package-new/package-new.component';
 
 const appRoutes:Routes = [
   {
@@ -16,9 +18,19 @@ const appRoutes:Routes = [
     data: { title: "Pilotos" }
   },
   {
+    path: "drivers/new",
+    component: DriverNewComponent,
+    data: { title: "Agregar Piloto" }
+  },
+  {
     path: "packages",
     component: PackageComponent,
     data: { title: "Paquetes" }
+  },
+  {
+    path: "packages/new",
+    component: PackageNewComponent,
+    data: { title: "Agregar Paquete" }
   },
   {
     path: "trucks",
@@ -38,7 +50,9 @@ const appRoutes:Routes = [
     TruckComponent,
     DriverComponent,
     PackageComponent,
-    TruckNewComponent
+    TruckNewComponent,
+    DriverNewComponent,
+    PackageNewComponent
   ],
   imports: [
     BrowserModule,

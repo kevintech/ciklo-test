@@ -21,10 +21,12 @@ const get = async function(request, response, next) {
 
 const create = async function(request, response, next) {
     try {
+        console.log(request.body);
         var driver = await driversService.createDriver(request.body);
         response.send(driver);
     }
     catch (error) {
+        console.log(error);
         response.status(500).json(error);
     }
 }

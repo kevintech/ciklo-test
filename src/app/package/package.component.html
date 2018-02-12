@@ -1,17 +1,26 @@
 <div class="container">
-    <h1>{{title}}</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Descripcion del Paquete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let package of packages">
-          <td>{{package._id}}</td>
-          <td>{{package.description}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <h1>{{title}}</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" routerLink="/packages/new" class="btn btn-primary">Nuevo registro</button>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Descripcion del Paquete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let package of packages">
+            <td>{{package._id}}</td>
+            <td>{{package.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

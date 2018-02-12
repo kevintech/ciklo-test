@@ -15,6 +15,7 @@ const createDriver = function(record) {
         license: record.license
     });
     var error = newRecord.validateSync();
+    console.log(error);
     //TODO: Proper error handling
     if (error) throw new Error("ValidationError");
     return newRecord.save();

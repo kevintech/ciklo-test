@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from "@angular/router"
 import { AppComponent } from './app.component';
 import { TruckComponent } from './truck/truck.component';
 import { DriverComponent } from './driver/driver.component';
 import { PackageComponent } from './package/package.component';
+import { TruckNewComponent } from './truck-new/truck-new.component';
 
 const appRoutes:Routes = [
   {
@@ -24,9 +26,9 @@ const appRoutes:Routes = [
     data: { title: "Flotilla" }
   },
   {
-    path: "trucks",
-    component: TruckComponent,
-    data: { title: "Trucks" }
+    path: "trucks/new",
+    component: TruckNewComponent,
+    data: { title: "Agregar Camión" }
   }
 ]
 
@@ -35,10 +37,12 @@ const appRoutes:Routes = [
     AppComponent,
     TruckComponent,
     DriverComponent,
-    PackageComponent
+    PackageComponent,
+    TruckNewComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],

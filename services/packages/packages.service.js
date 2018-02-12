@@ -15,7 +15,7 @@ const createPackage = function(record) {
     var error = newRecord.validateSync();
     //TODO: Proper error handling
     if (error) throw new Error("ValidationError");
-    return newRecord.save().exec();
+    return newRecord.save();
 }
 
 const updatePackage = function(id, record) {

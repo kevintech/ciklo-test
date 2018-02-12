@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Licencia de Conducir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let driver of drivers">
+          <td>{{driver.name}}</td>
+          <td>{{driver.birthday}}</td>
+          <td>{{driver.license}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

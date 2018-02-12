@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Matrícula</th>
+        <th>Color</th>
+        <th>Puertas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let truck of trucks">
+        <td>{{truck.licensePlate}}</td>
+        <td>{{truck.color}}</td>
+        <td>{{truck.doors}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

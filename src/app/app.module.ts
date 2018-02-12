@@ -10,6 +10,7 @@ import { PackageComponent } from './package/package.component';
 import { TruckNewComponent } from './truck-new/truck-new.component';
 import { DriverNewComponent } from './driver-new/driver-new.component';
 import { PackageNewComponent } from './package-new/package-new.component';
+import { TruckEditComponent } from './truck-edit/truck-edit.component';
 
 const appRoutes:Routes = [
   {
@@ -38,6 +39,11 @@ const appRoutes:Routes = [
     data: { title: "Flotilla" }
   },
   {
+    path: "trucks/:id",
+    component: TruckEditComponent,
+    data: { title: "Editar Camión" }
+  },
+  {
     path: "trucks/new",
     component: TruckNewComponent,
     data: { title: "Agregar Camión" }
@@ -52,7 +58,8 @@ const appRoutes:Routes = [
     PackageComponent,
     TruckNewComponent,
     DriverNewComponent,
-    PackageNewComponent
+    PackageNewComponent,
+    TruckEditComponent
   ],
   imports: [
     BrowserModule,

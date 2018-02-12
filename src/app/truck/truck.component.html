@@ -13,6 +13,7 @@
             <th>Matrícula</th>
             <th>Color</th>
             <th>Puertas</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
             <td>{{truck.licensePlate}}</td>
             <td>{{truck.color}}</td>
             <td>{{truck.doors}}</td>
+            <td><a [routerLink]="['/trucks', truck._id]">Edit</a></td>
           </tr>
         </tbody>
       </table>
